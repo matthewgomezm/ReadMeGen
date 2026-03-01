@@ -38,7 +38,8 @@ def set_model():
     if response.models:
         first_model_name = response.models[0].model
         size = response.models[0].size 
-        print(f"The first model is: {first_model_name}, size: {size// 1e9} GB")
+        print(f"The first model is: {first_model_name}, size: {size/1e9} GB")
         set_options()
 
 
+set_model()
