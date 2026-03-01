@@ -1,6 +1,9 @@
 import os
 import ollama as llm
 
+
+IGNORED_DIRS = {".git", "venv", "__pycache__"}
+
 # checks if ReadMe already exists
 def is_readme_missing():
     if os.path.exists("README.md"):
@@ -27,9 +30,10 @@ def set_options():
 
 # scan current directory for files and folders
 def scan_directory():
-    items = os.listdir(".")
-    print(f"Scanning current directory: {items}")
-    return items
+    with os.scandir(path= '.') as it:
+        for entry in it:
+            if not entry.name.startswith('.') and entry.is_file():
+                print(entry.name)
 
 # setting model to use for generation
 def set_model():
@@ -42,4 +46,4 @@ def set_model():
         set_options()
 
 
-set_model()
+scan_directory()
