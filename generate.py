@@ -1,7 +1,6 @@
 import os
 import ollama as llm
 
-
 IGNORED_DIRS = {".git", "venv", "__pycache__"}
 
 # checks if ReadMe already exists
@@ -30,10 +29,11 @@ def set_options():
 
 # scan current directory for files and folders
 def scan_directory():
-    with os.scandir(path= '.') as it:
-        for entry in it:
-            if not entry.name.startswith('.') and entry.is_file():
-                print(entry.name)
+    for root, dirs, files in os.walk('.'):
+        dirs[:] = [d for d in dirs if not d.startswith('.') and d not in IGNORED_DIRS]
+        for file in files:
+            if not file.startswith('.'):
+                print(os.path.join(root, file))
 
 # setting model to use for generation
 def set_model():
@@ -44,6 +44,5 @@ def set_model():
         size = response.models[0].size 
         print(f"The first model is: {first_model_name}, size: {size/1e9} GB")
         set_options()
+        return first_model_name 
 
-
-scan_directory()
