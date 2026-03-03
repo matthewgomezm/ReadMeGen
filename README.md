@@ -70,3 +70,4 @@ Feel free to extend the script to support additional file types, models, or cust
 ---
 
 **This is the product of the AI ReadMe with Local LLM. I personally ran it on M4 Pro Apple Silicon, with Qwen_Qwen3-8B pulled from Hugging Face. Very cool!**
+**Working on shell scripting to extend functionality.**
