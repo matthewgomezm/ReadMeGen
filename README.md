@@ -35,7 +35,7 @@ pip install ollama
 Start the Ollama server:
 
 ```bash
-ollama serve
+ollama run
 ```
 
 ### Step 2: Run the Script
@@ -69,7 +69,4 @@ Feel free to extend the script to support additional file types, models, or cust
 
 ---
 
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-```
+**This is the product of the AI ReadMe with Local LLM. I personally ran it on M4 Pro Apple Silicon, with Qwen_Qwen3-8B pulled from Hugging Face. Very cool!**
