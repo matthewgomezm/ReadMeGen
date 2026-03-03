@@ -2,9 +2,7 @@ import generate as gen
 
 def main():
     readme = gen.readMeGen()
-    readme.set_model()
-
+    readme.create_readme()
     
-
 if __name__ == "__main__":
     main()
