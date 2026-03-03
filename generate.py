@@ -91,7 +91,7 @@ class readMeGen:
         
         
         
-## some helper functions manually check conditions
+## some helper functions to manually check conditions
 
 # checks if ReadMe already exists
 def is_readme_missing():
