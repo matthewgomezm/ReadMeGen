@@ -12,8 +12,8 @@ class readMeGen:
     # set options for generation
     def set_options(self):
         self.options = llm.Options(
-            temperature=0.7, # controls randomness of output
-            max_tokens=2048, # maximum tokens to generate
+            temperature=0.7, # controls randomness of output, can change
+            max_tokens=2048, # maximum tokens to generate, can change
         )
 
     # setting model to use for generation
